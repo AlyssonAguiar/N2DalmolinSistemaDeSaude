@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\alyss\Desktop\N2-Dalmolin\.metadata\.plugins\org.eclipse.jdt.core
+3950331570.index
+2065525441.index
