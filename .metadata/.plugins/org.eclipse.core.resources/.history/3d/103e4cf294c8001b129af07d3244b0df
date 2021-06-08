@@ -1,0 +1,28 @@
+package view;
+
+import java.util.Scanner;
+import dao.DAOApoliceEmpresarial;
+
+public class SubMenuEmpresarial {
+		int opc;
+		Scanner escolha;
+		escolha = new Scanner(System.in);
+		
+		do {
+			System.out.println("\n------- Menu Apolice Empresarial -------");
+			System.out.println("     Opções");
+			System.out.println("1 - Inserir Cadastro");
+			System.out.println("2 - Listar Cadastros");
+			System.out.println("3 - Excluir Cadastros");
+			System.out.println("0 - voltar ao menu principal");			
+			opc = escolha.nextInt();		
+			
+		switch(opc) {
+			case 1:
+				adicionaApoliceEmpresarial()
+				
+		}
+			
+
+}while(opc != 0);
+		}

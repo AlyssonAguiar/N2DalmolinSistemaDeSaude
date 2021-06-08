@@ -1,0 +1,11 @@
+package view;
+
+import dao.DAOApoliceEmpresarial;
+import model.ApoliceDependenteEmpresarial;
+
+public class MenuApoliceEmpresarial {
+	DAOApoliceEmpresarial meudao = new DAOApoliceEmpresarial();
+	ApoliceDependenteEmpresarial apoliceDpndEmp = new ApoliceDependenteEmpresarial();
+	
+
+}

@@ -1,0 +1,19 @@
+package view;
+
+import java.util.Scanner;
+import controller.ParticularController;
+
+public class MenuParticular {
+	
+	Scanner leitura =  new Scanner(System.in);
+	
+	do {
+		System.out.println("Digite o código");
+		.id = leitura.nextLine();
+	}while(asseguradoEmpresarial.id.length() != 0);
+	
+	do {
+		System.out.println("Digite o ")
+	}
+
+}

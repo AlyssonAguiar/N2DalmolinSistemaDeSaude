@@ -1,5 +1,9 @@
 package controller;
 
-public class ParticularController {
+import model.ApoliceDependenteParticular;
 
-}
+public class ParticularController {
+	
+
+	}
+

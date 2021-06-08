@@ -1,0 +1,25 @@
+package view;
+
+import dao.DAOApoliceEmpresarial;
+import model.ApoliceDependenteEmpresarial;
+import.model.Apolice;
+
+public class MenuApoliceEmpresarial {
+	DAOApoliceEmpresarial meudao = new DAOApoliceEmpresarial();
+	ApoliceDependenteEmpresarial apoliceDpndEmp = new ApoliceDependenteEmpresarial();
+	apoliceDpndEmp.setId();
+	
+
+}
+
+
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	DAODepartamento meudao = new DAODepartamento();
+	Departamento meuDepto= new Departamento();
+	meuDepto.setCodigoDepartamento(3);
+	meuDepto.setNome("Departamento de Segurança");
+	meudao.adicionaDepartamento(meuDepto);
+	meudao.gravaArquivoDepartamentos();
+	
+}

@@ -1,0 +1,26 @@
+package model;
+
+import java.util.Date;
+
+public class ApoliceDependenteParticular extends Apolice {
+
+	public String cpfResponsavel;
+
+	public String getCpfResponsavel() {
+		return cpfResponsavel;
+	}
+
+	public void setCpfResponsavel(String cpfResponsavel) {
+		this.cpfResponsavel = cpfResponsavel;
+	}
+
+	@Override
+	public String toString() {
+		return "ApoliceDependenteParticular [cpfResponsavel=" + cpfResponsavel + ", id=" + id + ", dataAssinatura="
+				+ dataAssinatura + ", mesesVigencia=" + mesesVigencia + ", mensalidade=" + mensalidade
+				+ ", cpfAssegurado=" + cpfAssegurado + ", status=" + status + "]";
+	}
+
+	
+
+}
