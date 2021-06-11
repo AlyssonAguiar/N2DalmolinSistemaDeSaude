@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="controller.EmpresarialController"/>
+    <fullyQualifiedTypeName name="model.AsseguradoDependenteEmpresarial"/>
+    <fullyQualifiedTypeName name="model.ResponsavelEmpresarial"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="controller.ParticularController"/>
+    <fullyQualifiedTypeName name="model.AsseguradoDependenteParticular"/>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="com.google.gson.GsonBuilder"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="com.google.gson.reflect.TypeToken"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="javax.lang.model.element.ModuleElement"/>
+    <fullyQualifiedTypeName name="model.ApoliceDependenteEmpresarial"/>
+    <fullyQualifiedTypeName name="model.Apolice"/>
+    <fullyQualifiedTypeName name="dao.DAOApoliceEmpresarial"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="view.MenuApoliceEmpresarial"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,41 @@
+package model;
+
+public class ApoliceDependenteEmpresarial extends Apolice {
+
+	public int id;
+	public String cnpjResponsavel;
+	public String nomeResponsavel;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getCnpjResponsavel() {
+		return cnpjResponsavel;
+	}
+	public void setCnpjResponsavel(String cnpjResponsavel) {
+		this.cnpjResponsavel = cnpjResponsavel;
+	}
+	public String getNomeResponsavel() {
+		return nomeResponsavel;
+	}
+	public void setNomeResponsavel(String nomeResponsavel) {
+		this.nomeResponsavel = nomeResponsavel;
+	}
+	@Override
+	public String toString() {
+		return "ApoliceDependenteEmpresarial [id=" + id + ", cnpjResponsavel=" + cnpjResponsavel + ", nomeResponsavel="
+				+ nomeResponsavel + ", nomeAssegurado=" + nomeAssegurado + ", emailAssegurado=" + emailAssegurado
+				+ ", telefoneAssegurado=" + telefoneAssegurado + ", dataAssinatura=" + dataAssinatura
+				+ ", mesesVigencia=" + mesesVigencia + ", mensalidade=" + mensalidade + ", cpfAssegurado="
+				+ cpfAssegurado + ", status=" + status + "]";
+	}
+	
+}
+	
+	
+
+
+

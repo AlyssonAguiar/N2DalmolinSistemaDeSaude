@@ -1,6 +1,7 @@
+import java.io.IOException;
 import java.util.*;
 import view.MenuApoliceEmpresarial;
-
+import view.MenuApoliceEmpresarial;
 
 public class Menu {
 	
@@ -24,10 +25,11 @@ public class Menu {
 					break;
 				
 				case 2:
-					menuzinho()
-						inserir
-						listar
-						--excluir
+				{
+						MenuApoliceEmpresarial menu = new MenuApoliceEmpresarial();
+					menu.inserir();
+				}
+					
 					
 				case 0:
 					System.out.println("Saindo do sistema.....");

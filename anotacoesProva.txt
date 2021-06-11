@@ -1,0 +1,64 @@
+camadas{
+	model
+	controller
+	DAO -> classe que faz a integração com o BD
+	view
+}
+
+Regras de négocio{
+planos:
+>Particular
+	> deve ser vinculada a um dependente 
+		> pessoa fisica
+			>um dependente deve ser vinculado a um titular
+				>deverá ser uma pessoa física
+
+	> inicia como ativo
+
+"Uma pessoa responsável deve registrar o código, o CPF e o Nome."
+
+"deve registrar o código, a data de assinatura, 
+a qtde de meses de vigência, o valor da mensalidade, 
+CPF do Responsável e o Assegurado, status "
+
+código
+data de assinatura
+vigencia
+mensalidade
+cpf responsavel
+cpf assegurado
+status
+
+
+>Empresarial
+	>titular será a empresa
+		
+	>Para ser considerado ativo deve ter 3 dependentes ativos caso contrário será definido como inátivo
+
+"Uma empresa responsável deve registrar o código, o CNPJ e o nome"	
+
+"deve registrar o código, a data de assinatura, 
+a qtde de meses de vigência, o valor da mensalidade,
+ o CNPJ da empresa responsável e o Assegurado, status "
+
+
+>Assegurado:
+"deve registrar o código, o CPF, o nome e email e o Telefone"
+
+
+>Vencimento
+	> Deverá ser definido como vencido caso ultrapasse os meses especificados na apólice
+}
+
+
+Em cada menu deve ser ser possível: Inserir registro e Listar Registros.
+Se implementar a função que permite excluir Registro digitando o código de um registro ganha um ponto de bônus.
+Os dados devem ser persistidos em arquivo JSON conforme explicado em aula.
+Devem ser criadas as classes de Model, DAO, View e Control
+Deve ser criada apenas uma classe menu que irá conter a void main. Nesta void main é que serão chamadas as views de cada classe.
+Devem ser criados arquivos JSON que contenham 10 assegurados (distribua os segurados entre os responsáveis). 10 apólices de plano (6 de empresa e 4 particular. 6 responsáveis (2 de empresas e 4 de pessoas físicas). 
+Os nomes das pessoas físicas devem ser os integrantes do grupo.
+Os prints devem ser gerados em um único arquivo PDF.
+Os arquivos .JAVA devem ser reunidos em um único arquivo ZIP.
+Os arquivos .JSON devem ser reunidos em um único arquivo ZIP.
+Atenção para a regra dos nomes do arquivo.
