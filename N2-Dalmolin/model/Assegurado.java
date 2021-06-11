@@ -12,9 +12,35 @@ public class Assegurado {
 	@Expose
 	public String telefoneAssegurado;
 
-	private static ArrayList<Assegurado> listaDeClientes = new ArrayList<Assegurado>();
+//	private static ArrayList<Assegurado> listaDeClientes = new ArrayList<Assegurado>();
 	
-	public ArrayList<Assegurado> getListaDeClientes(){
-		return listaDeClientes;
+//	public ArrayList<Assegurado> getListaDeClientes(){
+//		return listaDeClientes;
+//	}
+
+	public String getNomeAssegurado() {
+		return nomeAssegurado;
 	}
+
+	public void setNomeAssegurado(String nomeAssegurado) {
+		this.nomeAssegurado = nomeAssegurado;
+	}
+
+	public String getEmailAssegurado() {
+		return emailAssegurado;
+	}
+
+	public void setEmailAssegurado(String emailAssegurado) {
+		this.emailAssegurado = emailAssegurado;
+	}
+
+	public String getTelefoneAssegurado() {
+		return telefoneAssegurado;
+	}
+
+	public void setTelefoneAssegurado(String telefoneAssegurado) {
+		this.telefoneAssegurado = telefoneAssegurado;
+	}
+	
+	
 }

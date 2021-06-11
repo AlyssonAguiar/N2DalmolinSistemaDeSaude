@@ -26,7 +26,7 @@ public class Menu {
 				
 				case 2:
 				{
-						MenuApoliceEmpresarial menu = new MenuApoliceEmpresarial();
+					MenuApoliceEmpresarial menu = new MenuApoliceEmpresarial();
 					menu.inserir();
 				}
 					

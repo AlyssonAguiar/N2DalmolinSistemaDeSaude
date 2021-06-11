@@ -22,15 +22,6 @@ public class ApoliceDependenteEmpresarial extends Apolice {
 		this.nomeResponsavel = nomeResponsavel;
 	}
 	
-	@Override
-	public String toString() {
-		return "ApoliceDependenteEmpresarial [id=" + id + "cnpjResponsavel=" + cnpjResponsavel + ", nomeResponsavel="
-				+ nomeResponsavel + ", dataAssinatura=" + dataAssinatura + ", mesesVigencia="
-				+ mesesVigencia + ", mensalidade=" + mensalidade + ", assegurado=" + assegurado + ", cpfAssegurado="
-				+ cpfAssegurado + ", status=" + status + "]";
-	}
-	
-	
 	
 }
 	

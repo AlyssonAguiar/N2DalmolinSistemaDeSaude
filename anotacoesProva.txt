@@ -62,3 +62,13 @@ Os prints devem ser gerados em um único arquivo PDF.
 Os arquivos .JAVA devem ser reunidos em um único arquivo ZIP.
 Os arquivos .JSON devem ser reunidos em um único arquivo ZIP.
 Atenção para a regra dos nomes do arquivo.
+
+
+@Override
+	@Override
+	public String toString() {
+		return "ApoliceDependenteEmpresarial [id=" + id + "cnpjResponsavel=" + cnpjResponsavel + ", nomeResponsavel="
+				+ nomeResponsavel + ", dataAssinatura=" + dataAssinatura + ", mesesVigencia="
+				+ mesesVigencia + ", mensalidade=" + mensalidade + ", assegurado=" + assegurado + ", cpfAssegurado="
+				+ cpfAssegurado + ", status=" + status + "]";
+	}

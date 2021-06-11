@@ -1,0 +1,58 @@
+package view;
+
+import java.io.IOException;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import dao.DAOApoliceEmpresarial;
+import model.ApoliceDependenteEmpresarial;
+import model.Assegurado;
+import model.Apolice;
+
+public class MenuApoliceEmpresarial extends ApoliceDependenteEmpresarial {
+	ApoliceDependenteEmpresarial apoliceDpndEmp = new ApoliceDependenteEmpresarial();
+	Assegurado assegurado = new Assegurado();
+
+	Scanner leitura = new Scanner(System.in);
+	Scanner numero = new Scanner(System.in);
+
+	public void inserir() {
+
+		leitura.nextLine();
+		System.out.println("Insira o id");
+		apoliceDpndEmp.id = numero.nextInt();
+
+		System.out.println("Insira o CNPJ do Responsável");
+		apoliceDpndEmp.cnpjResponsavel = leitura.nextLine();
+
+		System.out.println("Insira o Nome do Responsável");
+		apoliceDpndEmp.nomeResponsavel = leitura.nextLine();
+
+		System.out.println("Insira a data de Assinatura da Apólice dia/mes/ano");
+		apoliceDpndEmp.dataAssinatura = leitura.nextLine();
+
+		System.out.println("Insira quantos meses esse contrato será vigente");
+		apoliceDpndEmp.mesesVigencia = numero.nextInt();
+
+		System.out.println("Insira o valor da Mensalidade");
+		apoliceDpndEmp.mensalidade = numero.nextDouble();
+
+		System.out.println("Insira o Nome do Assegurado");
+		assegurado.nomeAssegurado = leitura.nextLine();
+
+		System.out.println("Insira o Email do Assegurado");
+		assegurado.emailAssegurado = leitura.nextLine();
+
+		System.out.println("Insira o Telefone do Assegurado");
+		assegurado.telefoneAssegurado = leitura.nextLine();
+
+		System.out.println("Insira o CPF do Assegurado");
+		apoliceDpndEmp.cpfAssegurado = leitura.nextLine();
+
+		DAOApoliceEmpresarial meudao = new DAOApoliceEmpresarial();
+		meudao.adicionaApoliceEmpresarial(apoliceDpndEmp);
+		meudao.gravaArquivoListaEmpresarial();
+	}
+}

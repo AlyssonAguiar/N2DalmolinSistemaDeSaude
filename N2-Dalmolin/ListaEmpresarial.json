@@ -1,0 +1,20 @@
+[
+  {
+    "cnpjResponsavel": "1",
+    "nomeResponsavel": "1",
+    "id": 1,
+    "dataAssinatura": "1",
+    "mesesVigencia": 1,
+    "mensalidade": 1.0,
+    "cpfAssegurado": "1"
+  },
+  {
+    "cnpjResponsavel": "",
+    "nomeResponsavel": "3",
+    "id": 3,
+    "dataAssinatura": "33",
+    "mesesVigencia": 3,
+    "mensalidade": 3.0,
+    "cpfAssegurado": "3"
+  }
+]
