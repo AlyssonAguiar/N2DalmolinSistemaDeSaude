@@ -1,3 +1,65 @@
 [
-  
+  {
+    "cnpjResponsavel": "984313",
+    "nomeResponsavel": "João Souza",
+    "status": "Ativo",
+    "id": 23615,
+    "dataAssinatura": "07/03/2021",
+    "mesesVigencia": 9,
+    "mensalidade": 600.0,
+    "cpfAssegurado": "36587412"
+  },
+  {
+    "cnpjResponsavel": "987463152",
+    "nomeResponsavel": "Wesley Batista",
+    "status": "Ativo",
+    "id": 9874568,
+    "dataAssinatura": "09/12/2019",
+    "mesesVigencia": 5,
+    "mensalidade": 800.0,
+    "cpfAssegurado": "65148982"
+  },
+  {
+    "cnpjResponsavel": "984313",
+    "nomeResponsavel": "João Souza",
+    "status": "Ativo",
+    "id": 45787,
+    "dataAssinatura": "28/09/2018",
+    "mesesVigencia": 9,
+    "mensalidade": 950.0,
+    "cpfAssegurado": "849849849"
+  },
+  {
+	"cnpjResponsavel": "984313",
+    "nomeResponsavel": "João Souza",
+    "status": "Ativo",
+    "id": 42,
+    "dataAssinatura": "24/03/2017",
+    "mesesVigencia": 12,
+    "mensalidade": 1000.0,
+    "cpfAssegurado": "313123"
+	
+	},
+	{
+	
+	"cnpjResponsavel": "987463152",
+    "nomeResponsavel": "Wesley Batista",
+    "status": "Ativo",
+    "id": 56,
+    "dataAssinatura": "15/09/2014",
+    "mesesVigencia": 11,
+    "mensalidade": 980.0,
+    "cpfAssegurado": "21367"
+	},
+	{
+	"cnpjResponsavel": "987463152",
+    "nomeResponsavel": "Wesley Batista",
+    "status": "Ativo",
+    "id": 89,
+    "dataAssinatura": "12/10/2011",
+    "mesesVigencia": 03,
+    "mensalidade": 500.0,
+    "cpfAssegurado": "67809"
+		
+	}
 ]

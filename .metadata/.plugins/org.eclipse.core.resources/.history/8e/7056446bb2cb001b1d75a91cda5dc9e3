@@ -98,7 +98,7 @@ public class DAOApoliceParticular {
 		FileReader filereader;
 
 		try {
-			filereader = new FileReader("ListaAsseguradoPart.json");
+			filereader = new FileReader("ListaAssegurado.json");
 
 			TypeToken<ArrayList<Assegurado>> token = new TypeToken<ArrayList<Assegurado>>() {
 			};

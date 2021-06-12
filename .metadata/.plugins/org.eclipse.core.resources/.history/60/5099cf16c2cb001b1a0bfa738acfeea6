@@ -28,6 +28,7 @@ public class Menu {
 			System.out.println("9 - Sair do Sistema");
 
 			op = teclado.nextInt();
+
 			switch (op) {
 			case 1:
 
@@ -37,20 +38,23 @@ public class Menu {
 				System.out.println("2 - Listar Apolices e Assegurados");
 				System.out.println("0 - Retornar ao Menu Principal");
 				option = menu1.nextInt();
-
 				menuApoliceParticular menuPart = new menuApoliceParticular();
-				if (option == 1) {
+				switch (option) {
+
+				case 1: {
 					menuPart.inserirParticular();
-					break;
 				}
 
-				if (option == 2) {
+				case 2: {
 					menuPart.listarParticular();
+				}
+
+				case 0: {
 					break;
 				}
 
-				if (option == 0) {
-					break;
+				default:
+					System.out.println("\nOpção inválida:");
 				}
 
 			case 2:
@@ -61,31 +65,33 @@ public class Menu {
 				System.out.println("0 - Retornar ao Menu Principal");
 				opc = menu2.nextInt();
 				MenuApoliceEmpresarial menuEmp = new MenuApoliceEmpresarial();
-
-				if (opc == 1) {
+				switch (opc) {
+				case 1: {
 					menuEmp.inserirEmpresarial();
-					break;
 				}
 
-				if (opc == 2) {
+				case 2: {
 					menuEmp.listarEmpresarial();
+				}
+
+				case 0: {
 					break;
 				}
 
-				if (opc == 0) {
-					break;
+				default:
+					System.out.println("\nOpção inválida:");
 				}
 
-			case 9: {
+			case 9:
+			{
 				System.out.println("Saindo do sistema.....");
-				System.exit(0);
+				break;
 			}
-
+			
 			default:
 				System.out.println("\nOpção inválida:");
 
 			}
-
 		} while (op != 0);
 	}
 

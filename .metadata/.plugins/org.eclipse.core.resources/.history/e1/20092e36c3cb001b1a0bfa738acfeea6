@@ -54,6 +54,7 @@ public class Menu {
 				}
 
 			case 2:
+
 				System.out.println("\n------- Assegurado Empresarial -------");
 				System.out.println("     MENU");
 				System.out.println("1 - Inserir um novo Assegurado ");
