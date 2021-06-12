@@ -15,13 +15,13 @@ import model.Assegurado;
 public class DAOApoliceEmpresarial {
 
 	private ArrayList<ApoliceDependenteEmpresarial> listaEmpresarial;
-	private ArrayList<Assegurado> listaAssegurado;
+	private ArrayList<Assegurado> listaAsseguradoEmp;
 
 	public DAOApoliceEmpresarial() {
 		listaEmpresarial = new ArrayList<ApoliceDependenteEmpresarial>();
 		leApoliceEmpresarial();
-		listaAssegurado = new ArrayList<Assegurado>();
-		leAssegurados();
+		listaAsseguradoEmp = new ArrayList<Assegurado>();
+		leAsseguradosEmp();
 		
 	}
 
@@ -29,8 +29,8 @@ public class DAOApoliceEmpresarial {
 		listaEmpresarial.add(asseguradoEmpresarial);
 	}
 	
-	public void AdicionaAssegurado(Assegurado asseguradoApolice) {
-		listaAssegurado.add(asseguradoApolice);
+	public void AdicionaAsseguradoEmp(Assegurado asseguradoApoliceEmp) {
+		listaAsseguradoEmp.add(asseguradoApoliceEmp);
 		}
 
 	public void listaEmpresarial() {
@@ -39,8 +39,8 @@ public class DAOApoliceEmpresarial {
 		}
 	}
 	
-	public void listaAssegurada() {
-		for(Assegurado x : listaAssegurado) {
+	public void listaAsseguradoEmp() {
+		for(Assegurado x : listaAsseguradoEmp) {
 			System.out.println(x.toString());
 		}
 	}
@@ -57,11 +57,11 @@ public class DAOApoliceEmpresarial {
 		}
 	}
 	
-	public void gravaArquivoListaAssegurado() {
+	public void gravaArquivoListaAsseguradoEmp() {
 		try {
 			Gson gson1 = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
-			FileWriter filewriter = new FileWriter("ListaAssegurado.json");
-			gson1.toJson(listaAssegurado, filewriter);
+			FileWriter filewriter = new FileWriter("ListaAsseguradoEmp.json");
+			gson1.toJson(listaAsseguradoEmp, filewriter);
 			filewriter.close();
 
 		} catch (IOException e) {
@@ -93,12 +93,12 @@ public class DAOApoliceEmpresarial {
 		}
 	}
 	
-	public void leAssegurados() {
+	public void leAsseguradosEmp() {
 		Gson gson1 = new GsonBuilder().setPrettyPrinting().create();
 		FileReader filereader;
 
 		try {
-			filereader = new FileReader("ListaAssegurado.json");
+			filereader = new FileReader("ListaAsseguradoEmp.json");
 
 			TypeToken<ArrayList<Assegurado>> token = new TypeToken<ArrayList<Assegurado>>() {
 			};
@@ -107,7 +107,7 @@ public class DAOApoliceEmpresarial {
 			minhaLista1 = gson1.fromJson(filereader, token.getType());
 
 			if (minhaLista1 != null) {
-				listaAssegurado = minhaLista1;
+				listaAsseguradoEmp = minhaLista1;
 			}
 
 			filereader.close();
@@ -121,6 +121,6 @@ public class DAOApoliceEmpresarial {
 	}
 	
 	public ArrayList<Assegurado> getListaAssegurado(){
-		return listaAssegurado;
+		return listaAsseguradoEmp;
 	}
 }

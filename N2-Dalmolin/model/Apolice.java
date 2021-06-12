@@ -1,7 +1,5 @@
 package model;
 
-import java.util.*;
-
 import com.google.gson.annotations.Expose;
 
 public abstract class Apolice{
@@ -54,8 +52,4 @@ public abstract class Apolice{
 	public void setCpfAssegurado(String cpfAssegurado) {
 		this.cpfAssegurado = cpfAssegurado;
 	}
-
-	
-	
-
 }

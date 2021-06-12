@@ -20,5 +20,8 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="view.MenuApoliceEmpresarial"/>
+    <fullyQualifiedTypeName name="model.ApoliceDependenteParticular"/>
     <fullyQualifiedTypeName name="model.Assegurado"/>
+    <fullyQualifiedTypeName name="dao.DAOApoliceParticular"/>
+    <fullyQualifiedTypeName name="view.menuApoliceParticular"/>
 </qualifiedTypeNameHistroy>

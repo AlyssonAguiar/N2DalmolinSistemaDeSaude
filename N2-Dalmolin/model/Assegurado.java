@@ -1,7 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-
 import com.google.gson.annotations.Expose;
 
 public class Assegurado {
@@ -41,6 +39,13 @@ public class Assegurado {
 	public void setTelefoneAssegurado(String telefoneAssegurado) {
 		this.telefoneAssegurado = telefoneAssegurado;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Assegurado [nomeAssegurado=" + nomeAssegurado + ", emailAssegurado=" + emailAssegurado
+				+ ", telefoneAssegurado=" + telefoneAssegurado + "]";
+	}
+
+
 	
 }

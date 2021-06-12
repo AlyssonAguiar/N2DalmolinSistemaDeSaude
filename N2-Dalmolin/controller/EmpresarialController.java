@@ -5,17 +5,17 @@ import dao.DAOApoliceEmpresarial;
 import model.ApoliceDependenteEmpresarial;
 
 public class EmpresarialController {
-	private DAOApoliceEmpresarial daoApoliceEmpresarial;
+	/*private DAOApoliceEmpresarial daoApoliceEmpresarial;
 	
 	//>> um plano empresarial deve ter pelo menos 3 dependentes ser considerado “Ativo”, caso contrário o status é “Inativo” 
 	
 	void verificaDependentes(DAOApoliceEmpresarial asseguradoEmpresarial) {
-		if(asseguradoEmpresarial.getListaEmpresarial().size() < 3) {
-			JOptionPane.showMessageDialog(null, "O Número de funcionários cadastrados é menor que o mínimo para manter o plano ATIVO");
+		if(asseguradoEmpresarial.getListaEmpresarial()) {
+			
 			
 		}
 	}
 
 	//>> O status de uma apólice deve ser definido como “Vencido” quando a quantidade de meses for superior a especificada na apólice.
-
+*/
 }

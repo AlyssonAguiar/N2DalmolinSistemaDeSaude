@@ -8,12 +8,12 @@ import model.Assegurado;
 
 public class MenuApoliceEmpresarial extends ApoliceDependenteEmpresarial {
 	ApoliceDependenteEmpresarial apoliceDpndEmp = new ApoliceDependenteEmpresarial();
-	Assegurado asseguradoApolice = new Assegurado();
+	Assegurado asseguradoApoliceEmp = new Assegurado();
 
 	Scanner leitura = new Scanner(System.in);
 	Scanner numero = new Scanner(System.in);
 
-	public void inserir() {
+	public void inserirEmpresarial() {
 
 		leitura.nextLine();
 		System.out.println("Insira o id");
@@ -35,21 +35,29 @@ public class MenuApoliceEmpresarial extends ApoliceDependenteEmpresarial {
 		apoliceDpndEmp.mensalidade = numero.nextDouble();
 
 		System.out.println("Insira o Nome do Assegurado");
-		asseguradoApolice.nomeAssegurado = leitura.nextLine();
+		asseguradoApoliceEmp.nomeAssegurado = leitura.nextLine();
 		
 		System.out.println("Insira o Email do Assegurado");
-		asseguradoApolice.emailAssegurado = leitura.nextLine();
+		asseguradoApoliceEmp.emailAssegurado = leitura.nextLine();
 
 		System.out.println("Insira o Telefone do Assegurado");
-		asseguradoApolice.telefoneAssegurado = leitura.nextLine();
+		asseguradoApoliceEmp.telefoneAssegurado = leitura.nextLine();
 
 		System.out.println("Insira o CPF do Assegurado");
 		apoliceDpndEmp.cpfAssegurado = leitura.nextLine();
 
 		DAOApoliceEmpresarial meudao = new DAOApoliceEmpresarial();
 		meudao.adicionaApoliceEmpresarial(apoliceDpndEmp);
-		meudao.AdicionaAssegurado(asseguradoApolice);
+		meudao.AdicionaAsseguradoEmp(asseguradoApoliceEmp);
 		meudao.gravaArquivoListaEmpresarial();
-		meudao.gravaArquivoListaAssegurado();
+		meudao.gravaArquivoListaAsseguradoEmp();
 	}
+
+
+	public void listarEmpresarial() {
+		DAOApoliceEmpresarial listas = new DAOApoliceEmpresarial();
+		listas.listaEmpresarial();
+		listas.listaAsseguradoEmp();
+	}
+	
 }
