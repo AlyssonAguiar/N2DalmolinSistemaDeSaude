@@ -1,0 +1,104 @@
+package dao;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import model.Apolice;
+import model.Dependente;
+import model.Titular;
+
+
+public class DAOApolice {
+	
+	private ArrayList<Apolice> listaApolice;
+	
+
+	public DAOApolice() {
+		listaApolice = new ArrayList<Apolice>();
+		leApolice();
+
+	}
+
+	public void adicionaApolice(Apolice apolice) {
+		listaApolice.add(apolice);
+	}
+	
+	public void listaApolice() {
+		for (Apolice a : listaApolice) {
+			System.out.println(a.toString());
+		}
+	}
+	
+	public void gravaArquivoListaApolice() {
+		try {
+			Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
+			FileWriter filewriter = new FileWriter("listaApolice.json");
+			gson.toJson(listaApolice, filewriter);
+			filewriter.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void leApolice() {
+
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		FileReader filereader;
+
+		try {
+			filereader = new FileReader("listaApolice.json");
+
+			TypeToken<ArrayList<Apolice>> token = new TypeToken<ArrayList<N2_ApoliceDependenteParticular>>() {
+			};
+
+			ArrayList<N2_ApoliceDependenteParticular> minhaLista = new ArrayList<N2_ApoliceDependenteParticular>();
+			minhaLista = gson.fromJson(filereader, token.getType());
+
+			if (minhaLista != null) {
+				listaParticular = minhaLista;
+			}
+
+			filereader.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void leAsseguradosPart() {
+		Gson gson1 = new GsonBuilder().setPrettyPrinting().create();
+		FileReader filereader;
+
+		try {
+			filereader = new FileReader("ListaAsseguradoPart.json");
+
+			TypeToken<ArrayList<Dependente>> token = new TypeToken<ArrayList<Dependente>>() {
+			};
+
+			ArrayList<Dependente> minhaLista1 = new ArrayList<Dependente>();
+			minhaLista1 = gson1.fromJson(filereader, token.getType());
+
+			if (minhaLista1 != null) {
+				listaAsseguradoPart = minhaLista1;
+			}
+
+			filereader.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public ArrayList<N2_ApoliceDependenteParticular> getListaEmpresarial() {
+		return listaParticular;
+	}
+	
+	public ArrayList<Dependente> getListaAsseguradoPart(){
+		return listaAsseguradoPart;
+	}
+}

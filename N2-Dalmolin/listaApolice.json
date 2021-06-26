@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "dataAssinatura": "01/01/2021",
+    "mesesVigencia": 1,
+    "mensalidade": 1000.0,
+    "cpfAssegurado": "1",
+    "cpfResponsavel": "1",
+    "status": "testando",
+    "listaDependente": [
+      {
+        "id": 1,
+        "nomeAssegurado": "TESTE",
+        "emailAssegurado": "teste@email.com",
+        "telefoneAssegurado": "1111111"
+      }
+    ],
+    "listaTitular": []
+  }
+]

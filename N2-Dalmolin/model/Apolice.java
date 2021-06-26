@@ -1,8 +1,10 @@
 package model;
 
+import java.util.ArrayList;
+
 import com.google.gson.annotations.Expose;
 
-public abstract class Apolice{
+public class Apolice{
 	@Expose
 	public int id;
 	@Expose
@@ -13,15 +15,21 @@ public abstract class Apolice{
 	public double mensalidade;
 	@Expose
 	public String cpfAssegurado;
+	@Expose
+	public String cpfResponsavel;
+	@Expose
+	public String status;
+	@Expose
+	public ArrayList<Dependente> listaDependente;
+	@Expose
+	public ArrayList<Titular> listaTitular;
 	
-	public Assegurado assegurado;
+	public Apolice() {
+		super();
+		listaDependente = new ArrayList<Dependente>();
+		listaTitular = new ArrayList<Titular>();
+	}
 	
-	public Assegurado getAssegurado() {
-		return assegurado;
-	}
-	public void setAssegurado(Assegurado assegurado) {
-		this.assegurado = assegurado;
-	}
 	public int getId() {
 		return id;
 	}
@@ -52,4 +60,32 @@ public abstract class Apolice{
 	public void setCpfAssegurado(String cpfAssegurado) {
 		this.cpfAssegurado = cpfAssegurado;
 	}
+	public String getCpfResponsavel() {
+		return cpfResponsavel;
+	}
+	public void setCpfResponsavel(String cpfResponsavel) {
+		this.cpfResponsavel = cpfResponsavel;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	public ArrayList<Dependente> getListaDependente(){
+		return listaDependente;
+	}
+	public ArrayList<Titular> getListaTitular(){
+		return listaTitular;
+	}
+
+	@Override
+	public String toString() {
+		return "Apolice [id=" + id + ", dataAssinatura=" + dataAssinatura + ", mesesVigencia=" + mesesVigencia
+				+ ", mensalidade=" + mensalidade + ", cpfAssegurado=" + cpfAssegurado + ", cpfResponsavel="
+				+ cpfResponsavel + ", status=" + status + "]";
+	}
+	
+	
 }

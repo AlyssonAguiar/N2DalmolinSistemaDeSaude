@@ -1,0 +1,42 @@
+
+
+>> criando uma apolice
+	@Expose
+	public int id;
+	@Expose
+	public String dataAssinatura;
+	@Expose
+	public int mesesVigencia;
+	@Expose
+	public double mensalidade;
+	@Expose
+	public String cpfAssegurado;
+	@Expose
+	public String cpfResponsavel;
+	@Expose
+	public String status = "Ativo";
+
+>> Adicionar titular
+	@Expose
+	public int id;
+	@Expose
+	public String cpf;
+	@Expose
+	public String nome;
+
+>> adicionar dependente
+	@Expose
+	public int id;
+	@Expose
+	public String nomeAssegurado;
+	@Expose
+	public String emailAssegurado;
+	@Expose
+	public String telefoneAssegurado;
+
+
+listar
+
+1 > apolice, dependente o titular
+2 > 
+

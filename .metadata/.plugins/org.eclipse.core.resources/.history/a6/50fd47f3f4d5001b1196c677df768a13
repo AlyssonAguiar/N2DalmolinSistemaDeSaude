@@ -1,0 +1,25 @@
+package controller;
+
+import java.util.ArrayList;
+
+import dao.DAOApolice;
+import model.Apolice;
+
+public class ParticularController {
+	public DAOApolice daoApolice = new DAOApolice();
+		
+	void insereApolice (Apolice apolice) {
+		daoApolice.adicionaApolice(apolice);
+		daoApolice.gravaArquivoListaApolice();
+	}
+	
+	public ArrayList<Apolice> getListaApolice(){
+		return daoApolice.getListaApolice();
+	}
+	
+	public int getTotalApolices() {
+		return daoApolice.getListaApolice().size();
+	}
+
+}
+

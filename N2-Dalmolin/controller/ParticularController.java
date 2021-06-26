@@ -1,18 +1,36 @@
 package controller;
 
-import dao.DAOApoliceEmpresarial;
-import model.ApoliceDependenteParticular;
+import java.util.ArrayList;
+
+import dao.DAOApolice;
+import model.Apolice;
 
 public class ParticularController {
-/* private DAOApoliceEmpresarial daoApoliceEmpresarial;
-	
-	//>> um plano empresarial deve ter pelo menos 3 dependentes ser considerado “Ativo”, caso contrário o status é “Inativo” 
-	
-	void verificaDependentes(DAOApoliceEmpresarial asseguradoEmpresarial) {
-		if(asseguradoEmpresarial.getListaEmpresarial()) {
-			
-			
-		}*/
+	public DAOApolice daoApolice = new DAOApolice();
+	//private ArrayList<Apolice> listaApolice = new ArrayList<Apolice>();
 
+	public ArrayList<Apolice> getListaApolice(){
+		return daoApolice.getListaApolice();
 	}
+	
+	public void insereApolice (Apolice apolice) {
+		daoApolice.adicionaApolice(apolice);
+		daoApolice.gravaArquivoListaApolice();
+	}
+	
+	public void insereNaApolice (Apolice apolice) {
+		daoApolice.gravaArquivoListaApolice();
+		
+	}
+		
+	/*public void adicionaAPolice(Apolice apolice) {
+		listaApolice.add(apolice);
+	}*/
+	
+	public int getTotalApolices() {
+		return daoApolice.getListaApolice().size();
+	}
+	
+
+}
 

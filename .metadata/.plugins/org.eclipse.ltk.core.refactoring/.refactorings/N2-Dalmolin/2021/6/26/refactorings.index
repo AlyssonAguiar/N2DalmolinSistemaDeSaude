@@ -1,0 +1,14 @@
+1624558533502	Delete element
+1624580165695	Rename type 'Assegurado'
+1624580505213	Rename type 'ApoliceDependenteParticular'
+1624580523940	Rename type 'ApoliceDependenteEmpresarial'
+1624580542531	Rename type 'menuApoliceParticular'
+1624580561424	Rename type 'MenuApoliceEmpresarial'
+1624580589642	Rename type 'DAOApoliceEmpresarial'
+1624580600626	Rename type 'EmpresarialController'
+1624580614602	Rename type 'N2DAOApoliceEmpresarial'
+1624580894160	Rename compilation unit 'DAOApoliceParticular.java'
+1624641459601	Delete element
+1624641684618	Delete element
+1624651497370	Delete element
+1624727616673	Rename compilation unit 'Menu.java'

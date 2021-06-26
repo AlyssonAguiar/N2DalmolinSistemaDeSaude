@@ -1,0 +1,92 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Toolkit;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+import controller.ParticularController;
+import model.Apolice;
+
+public class listarApolices extends JFrame {
+
+	private JPanel contentPane;
+	private JTable table;
+	private ParticularController apoliceController = new ParticularController();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					listarApolices frame = new listarApolices();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public listarApolices() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\alyss\\Desktop\\N2-Dalmolin\\iconfinder_6000463_corona_covid19_insurance_protect_virus_icon_512px.png"));
+		setTitle("Lista de Apolices");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 549, 401);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null, null, null, null, null},
+			},
+			new String[] {
+				"Id Apolice", "Data Assinatura", "Meses Vigencia", "Mensalidade", "CPF Assegurado", "CPF Responsavel", "Status"
+			}
+		) {
+			Class[] columnTypes = new Class[] {
+				Integer.class, String.class, Integer.class, Double.class, String.class, String.class, String.class
+			};
+			public Class getColumnClass(int columnIndex) {
+				return columnTypes[columnIndex];
+			}
+		});
+		table.setBounds(21, 317, 476, -259);
+		contentPane.add(table);
+	}
+	void mostrar() {
+		DefaultTableModel tabela = new DefaultTableModel();
+		String titulos [] = { "Id Apolice", "Data Assinatura", "Meses Vigencia",
+				"Mensalidade", "CPF Assegurado", "CPF Responsavel", "Status"};
+		tabela.setColumnIdentifiers(titulos);
+		int indice = 1;
+		for (Apolice a : apoliceController.getListaApolice()) {
+			tabela.addRow(new Object[] {
+					Integer.toString(indice),
+					Integer.toString(a.getId()),
+					a.getDataAssinatura(),
+					Integer.toString(a.getMesesVigencia()),
+					a.getMensalidade(),
+					a.getCpfAssegurado(),
+					a.getCpfResponsavel(),
+					a.getStatus()
+					
+			});
+			indice++;
+		}
+		table.setModel(tabela);
+	}
+}

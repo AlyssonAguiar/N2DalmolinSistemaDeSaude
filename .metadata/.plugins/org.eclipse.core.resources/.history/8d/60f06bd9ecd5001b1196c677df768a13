@@ -1,0 +1,75 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Toolkit;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class listarApolices extends JFrame {
+
+	private JPanel contentPane;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					listarApolices frame = new listarApolices();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public listarApolices() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\alyss\\Desktop\\N2-Dalmolin\\iconfinder_6000463_corona_covid19_insurance_protect_virus_icon_512px.png"));
+		setTitle("Lista de Apolices");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 549, 401);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+			},
+			new String[] {
+				"Id Apolice", "Data Assinatura", "Meses Vigencia", "Valor Mensalidade", "CPF Assegurado", "CPF Responsavel", "Status"
+			}
+		));
+		table.getColumnModel().getColumn(0).setPreferredWidth(56);
+		table.getColumnModel().getColumn(1).setPreferredWidth(104);
+		table.getColumnModel().getColumn(2).setPreferredWidth(86);
+		table.getColumnModel().getColumn(3).setPreferredWidth(115);
+		table.getColumnModel().getColumn(4).setPreferredWidth(116);
+		table.getColumnModel().getColumn(5).setPreferredWidth(117);
+		table.setBounds(34, 263, 435, -224);
+		contentPane.add(table);
+	}
+}

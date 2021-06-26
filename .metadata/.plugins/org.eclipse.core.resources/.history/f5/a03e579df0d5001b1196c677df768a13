@@ -1,0 +1,79 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Toolkit;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+import controller.ParticularController;
+import model.Apolice;
+import javax.swing.JScrollPane;
+
+public class listarApolices extends JFrame {
+
+	private JPanel contentPane;
+	private ParticularController apoliceController = new ParticularController();
+	private JTable tabela;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					listarApolices frame = new listarApolices();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public listarApolices() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\alyss\\Desktop\\N2-Dalmolin\\iconfinder_6000463_corona_covid19_insurance_protect_virus_icon_512px.png"));
+		setTitle("Lista de Apolices");
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 549, 401);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 10, 515, 344);
+		contentPane.add(scrollPane);
+		
+		tabela = new JTable();
+		tabela.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"Indice", "Id APolice", "Data Assinatura", "Meses Vigencia", "Mensalidade", "CPF Assegurado", "CPF Responsavel", "Status"
+			}
+		) {
+			Class[] columnTypes = new Class[] {
+				Integer.class, Integer.class, String.class, Integer.class, Double.class, String.class, String.class, String.class
+			};
+			public Class getColumnClass(int columnIndex) {
+				return columnTypes[columnIndex];
+			}
+		});
+		tabela.getColumnModel().getColumn(2).setPreferredWidth(98);
+		tabela.getColumnModel().getColumn(3).setPreferredWidth(96);
+		tabela.getColumnModel().getColumn(5).setPreferredWidth(107);
+		tabela.getColumnModel().getColumn(6).setPreferredWidth(99);
+		scrollPane.setColumnHeaderView(tabela);
+	}
+	
+	}
+}

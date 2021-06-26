@@ -1,0 +1,105 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import dao.DAOApolice;
+import model.Dependente;
+
+import java.awt.Toolkit;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class addDependenteApolicePlanoParticular extends JFrame {
+
+	private JPanel pnDependente;
+	private JTextField textIdApolice;
+	private JTextField textField;
+	private JTextField textEmail;
+	private JTextField textTelefone;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					addDependenteApolicePlanoParticular frame = new addDependenteApolicePlanoParticular();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public addDependenteApolicePlanoParticular() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\alyss\\Desktop\\N2-Dalmolin\\iconfinder_6000463_corona_covid19_insurance_protect_virus_icon_512px.png"));
+		setTitle("Adicionar Dependente Apolice\r\n");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 532, 417);
+		pnDependente = new JPanel();
+		pnDependente.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(pnDependente);
+		pnDependente.setLayout(null);
+		
+		JLabel lblId = new JLabel("Id Apolice");
+		lblId.setBounds(86, 104, 194, 19);
+		pnDependente.add(lblId);
+		
+		textIdApolice = new JTextField();
+		textIdApolice.setBounds(306, 104, 161, 19);
+		pnDependente.add(textIdApolice);
+		textIdApolice.setColumns(10);
+		
+		JLabel lblNomeAssegurado = new JLabel("Nome Assegurado");
+		lblNomeAssegurado.setBounds(86, 145, 194, 13);
+		pnDependente.add(lblNomeAssegurado);
+		
+		textField = new JTextField();
+		textField.setBounds(306, 142, 161, 19);
+		pnDependente.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel = new JLabel("Email Assegurado");
+		lblNewLabel.setBounds(86, 185, 194, 13);
+		pnDependente.add(lblNewLabel);
+		
+		textEmail = new JTextField();
+		textEmail.setBounds(306, 182, 161, 19);
+		pnDependente.add(textEmail);
+		textEmail.setColumns(10);
+		
+		JLabel lblTelefone = new JLabel("Telefone");
+		lblTelefone.setBounds(86, 225, 194, 13);
+		pnDependente.add(lblTelefone);
+		
+		textTelefone = new JTextField();
+		textTelefone.setBounds(306, 222, 161, 19);
+		pnDependente.add(textTelefone);
+		textTelefone.setColumns(10);
+		
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DAOApolice meudao = new DAOApolice();
+				Dependente meudpnt = new Dependente(meudao.getListaApolice().));
+				meudpnt.setId(Integer.parseInt(textIdApolice.getText()));
+			}
+		});
+		btnCadastrar.setBounds(381, 306, 127, 64);
+		pnDependente.add(btnCadastrar);
+	}
+
+}
